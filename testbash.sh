@@ -14,7 +14,7 @@ then
 	sonsatir=""
 	while  IFS= read -r line
         do
-		echo "$line<
+		echo "$line"
 		sonsatir="${line}"
         done < $input
 	stringarray=($sonsatir)
@@ -22,7 +22,7 @@ then
 	ay=${stringarray[0]}
 	yil=${stringarray[2]}
 	sicaklik=${stringarray[3]}
-	echo "gun: $gun ay: $ay yil: $yil sicaklik: $sicaklik"
+	echo "gun: $gun ay: $ay yıl: $yil sıcakloık: $sicaklik"
 else
 	echo "Dosya ismi bulunamadı"
 fi
