@@ -9,12 +9,20 @@ read dosyaismi
 if [ -e $dosyaismi ]
 then
 	echo "Dosya ismi bulundu"
-	while  read x1 x2 x3 x4
-
+	sort -nk 4 $dosyaismi > "denemesort.txt"
+	input="denemesort.txt"
+	sonsatir=""
+	while  IFS= read -r line
         do
-                echo  ${x2}      ${x1}      ${x3}      ${x4}
-        done < $dosyaismi
-	sort -nk 4 $dosyaismi | tail -1
+		echo "$line<
+		sonsatir="${line}"
+        done < $input
+	stringarray=($sonsatir)
+	gun=${stringarray[1]}
+	ay=${stringarray[0]}
+	yil=${stringarray[2]}
+	sicaklik=${stringarray[3]}
+	echo "gun: $gun ay: $ay yil: $yil sicaklik: $sicaklik"
 else
 	echo "Dosya ismi bulunamadı"
 fi
