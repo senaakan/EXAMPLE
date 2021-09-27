@@ -12,7 +12,7 @@ then
 	sort -nk 4 $dosyaismi > "denemesort.txt"
 	input="denemesort.txt"
 	sonsatir=""
-	while  IFS= read -r line
+	while  read line
         do
 		echo "$line"
 		sonsatir="${line}"
