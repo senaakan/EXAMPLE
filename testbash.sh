@@ -22,7 +22,7 @@ then
 	ay=${stringarray[0]}
 	yil=${stringarray[2]}
 	sicaklik=${stringarray[3]}
-	echo "gun: $gun ay: $ay yıl: $yil sıcakloık: $sicaklik"
+	echo "gun: $gun ay: $ay yıl: $yil sıcaklık: $sicaklik"
 else
 	echo "Dosya ismi bulunamadı"
 fi
